@@ -47,7 +47,8 @@ public class AssignmentsPerStudent {
 
             for (Assignment a : entry.getValue()) {
 
-                if (a.getSubDateTime().get(Calendar.WEEK_OF_YEAR) == c.get(Calendar.WEEK_OF_YEAR)) {
+                if (a.getSubDateTime().get(Calendar.WEEK_OF_YEAR) == c.get(Calendar.WEEK_OF_YEAR)
+                        && a.getSubDateTime().get(Calendar.YEAR) == c.get(Calendar.YEAR)) {
                     System.out.println(mapStudentID.get(entry.getKey()).getLastName() + " " + mapStudentID.get(entry.getKey()).getFirstName());
                     break;
                 }
